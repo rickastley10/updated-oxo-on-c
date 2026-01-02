@@ -12,9 +12,9 @@ int clearscreen(){
     //system("clear");
 }
 int twoplayer(){
-char a1[10] = "1", a2[10] = "2", a3[10] = "3", a4[10] = "4", a5[10] = "5", a6[10] = "6", a7[10] = "7", a8[10] = "8", a9[10] = "9";
+    char a1[10] = "1", a2[10] = "2", a3[10] = "3", a4[10] = "4", a5[10] = "5", a6[10] = "6", a7[10] = "7", a8[10] = "8", a9[10] = "9";
     int turn = 1;
-
+    int turn2 = 0;
     while (1)
     {
         
@@ -129,14 +129,16 @@ char a1[10] = "1", a2[10] = "2", a3[10] = "3", a4[10] = "4", a5[10] = "5", a6[10
             strcpy(a8, "8");
             strcpy(a9, "9");
             turn = 0;
+            int turn2 = 0;
         }
+        
         
         turn = turn + 1;
 
         if (turn == 2){
             turn = 0;
         }
-
+        turn2 = turn2 + 1;
         clearscreen();
         
 
@@ -155,6 +157,7 @@ char a1[10] = "1", a2[10] = "2", a3[10] = "3", a4[10] = "4", a5[10] = "5", a6[10
             strcpy(a8, "8");
             strcpy(a9, "9");
             turn = 1;
+            int turn2 = 0;
         }
         if(strcmp(a4, a5) == 0 && strcmp(a5, a6) == 0) {
             printf("%s won!", a4);
@@ -168,6 +171,7 @@ char a1[10] = "1", a2[10] = "2", a3[10] = "3", a4[10] = "4", a5[10] = "5", a6[10
             strcpy(a8, "8");
             strcpy(a9, "9");
             turn = 1;
+            int turn2 = 0;
         }
         if(strcmp(a7, a8) == 0 && strcmp(a8, a9) == 0) {
             printf("%s won!", a7);
@@ -181,6 +185,7 @@ char a1[10] = "1", a2[10] = "2", a3[10] = "3", a4[10] = "4", a5[10] = "5", a6[10
             strcpy(a8, "8");
             strcpy(a9, "9");
             turn = 1;
+            int turn2 = 0;
         }
 
 
@@ -197,6 +202,7 @@ char a1[10] = "1", a2[10] = "2", a3[10] = "3", a4[10] = "4", a5[10] = "5", a6[10
             strcpy(a8, "8");
             strcpy(a9, "9");
             turn = 1;
+            int turn2 = 0;
         }
         if(strcmp(a2, a5) == 0 && strcmp(a5, a8) == 0) {
             printf("%s won!", a2);
@@ -210,6 +216,7 @@ char a1[10] = "1", a2[10] = "2", a3[10] = "3", a4[10] = "4", a5[10] = "5", a6[10
             strcpy(a8, "8");
             strcpy(a9, "9");
             turn = 1;
+            int turn2 = 0;
         }
         if(strcmp(a3, a6) == 0 && strcmp(a6, a9) == 0) {
             printf("%s won!", a3);
@@ -223,6 +230,7 @@ char a1[10] = "1", a2[10] = "2", a3[10] = "3", a4[10] = "4", a5[10] = "5", a6[10
             strcpy(a8, "8");
             strcpy(a9, "9");
             turn = 1;
+            int turn2 = 0;
         }
 
 
@@ -239,6 +247,7 @@ char a1[10] = "1", a2[10] = "2", a3[10] = "3", a4[10] = "4", a5[10] = "5", a6[10
             strcpy(a8, "8");
             strcpy(a9, "9");
             turn = 1;
+            int turn2 = 0;
         }
         if(strcmp(a3, a5) == 0 && strcmp(a5, a7) == 0) {
             printf("%s won!", a3);
@@ -252,14 +261,29 @@ char a1[10] = "1", a2[10] = "2", a3[10] = "3", a4[10] = "4", a5[10] = "5", a6[10
             strcpy(a8, "8");
             strcpy(a9, "9");
             turn = 1;
+            int turn2 = 0;
         }
-        
-    }
+        if (turn2 ==9){
+            printf("tie");
+            strcpy(a1, "1");
+            strcpy(a2, "2");
+            strcpy(a3, "3");
+            strcpy(a4, "4");
+            strcpy(a5, "5");
+            strcpy(a6, "6");
+            strcpy(a7, "7");
+            strcpy(a8, "8");
+            strcpy(a9, "9");
+            turn = 1;
+            int turn2 = 0;
+            
+        }
+    }   
 }
 int oneplayer(){
 char a1[10] = "1", a2[10] = "2", a3[10] = "3", a4[10] = "4", a5[10] = "5", a6[10] = "6", a7[10] = "7", a8[10] = "8", a9[10] = "9";
     int turn = 1;
-
+    int turn2 = 0;
     while (1)
     {
         
@@ -385,19 +409,22 @@ char a1[10] = "1", a2[10] = "2", a3[10] = "3", a4[10] = "4", a5[10] = "5", a6[10
             strcpy(a8, "8");
             strcpy(a9, "9");
             turn = 0;
+            turn2 = 0;
         }
         
+        turn2 = turn2 + 1;
         turn = turn + 1;
         
         if (turn == 2){
             turn = 0;
         }
+        
         if (turn == 0){
             int valid = 0;
 
                 while (valid ==0)
                 {
-                    
+                    if (turn2 == 9){break;}
                 
                 
                     srand(time(NULL)); 
@@ -444,11 +471,25 @@ char a1[10] = "1", a2[10] = "2", a3[10] = "3", a4[10] = "4", a5[10] = "5", a6[10
                     }
                 }
 
-
+                
 
         }
         clearscreen();
-        
+        if (turn2 < 9){turn2 = turn2 + 1;}
+        else if (turn2 ==9){
+            strcpy(a1, "1");
+            strcpy(a2, "2");
+            strcpy(a3, "3");
+            strcpy(a4, "4");
+            strcpy(a5, "5");
+            strcpy(a6, "6");
+            strcpy(a7, "7");
+            strcpy(a8, "8");
+            strcpy(a9, "9");
+            turn = 0;
+            turn2 = 0;
+            printf("tie");
+        }
 
 
 
@@ -465,6 +506,7 @@ char a1[10] = "1", a2[10] = "2", a3[10] = "3", a4[10] = "4", a5[10] = "5", a6[10
             strcpy(a8, "8");
             strcpy(a9, "9");
             turn = 1;
+            int turn2 = 0;
         }
         if(strcmp(a4, a5) == 0 && strcmp(a5, a6) == 0) {
             printf("%s won!", a4);
@@ -478,6 +520,7 @@ char a1[10] = "1", a2[10] = "2", a3[10] = "3", a4[10] = "4", a5[10] = "5", a6[10
             strcpy(a8, "8");
             strcpy(a9, "9");
             turn = 1;
+            int turn2 = 0;
         }
         if(strcmp(a7, a8) == 0 && strcmp(a8, a9) == 0) {
             printf("%s won!", a7);
@@ -491,6 +534,7 @@ char a1[10] = "1", a2[10] = "2", a3[10] = "3", a4[10] = "4", a5[10] = "5", a6[10
             strcpy(a8, "8");
             strcpy(a9, "9");
             turn = 1;
+            int turn2 = 0;
         }
 
 
@@ -507,6 +551,7 @@ char a1[10] = "1", a2[10] = "2", a3[10] = "3", a4[10] = "4", a5[10] = "5", a6[10
             strcpy(a8, "8");
             strcpy(a9, "9");
             turn = 1;
+            int turn2 = 0;
         }
         if(strcmp(a2, a5) == 0 && strcmp(a5, a8) == 0) {
             printf("%s won!", a2);
@@ -520,6 +565,7 @@ char a1[10] = "1", a2[10] = "2", a3[10] = "3", a4[10] = "4", a5[10] = "5", a6[10
             strcpy(a8, "8");
             strcpy(a9, "9");
             turn = 1;
+            int turn2 = 0;
         }
         if(strcmp(a3, a6) == 0 && strcmp(a6, a9) == 0) {
             printf("%s won!", a3);
@@ -533,6 +579,7 @@ char a1[10] = "1", a2[10] = "2", a3[10] = "3", a4[10] = "4", a5[10] = "5", a6[10
             strcpy(a8, "8");
             strcpy(a9, "9");
             turn = 1;
+            int turn2 = 0;
         }
 
 
@@ -549,6 +596,7 @@ char a1[10] = "1", a2[10] = "2", a3[10] = "3", a4[10] = "4", a5[10] = "5", a6[10
             strcpy(a8, "8");
             strcpy(a9, "9");
             turn = 1;
+            int turn2 = 0;
         }
         if(strcmp(a3, a5) == 0 && strcmp(a5, a7) == 0) {
             printf("%s won!", a3);
@@ -562,21 +610,33 @@ char a1[10] = "1", a2[10] = "2", a3[10] = "3", a4[10] = "4", a5[10] = "5", a6[10
             strcpy(a8, "8");
             strcpy(a9, "9");
             turn = 1;
+            int turn2 = 0;
         }
         
     }
 
 }
+int menu(){
+    while (1)
+    {
+        
+    
+    
+        int choise;
+        printf("    1 - single player\n    2 - multiplayer\n    3 - quit\n> ");
+        scanf("%d", &choise);
+        if (choise == 1){
+            oneplayer();
+        }
+        else if (choise == 2){
+            twoplayer();
+        }
+        else if (choise ==3) {
+            break;
+        }
+
+    }
+}
 int main(){
-    int choise;
-    printf("    1 - single player\n    2 - multiplayer\n> ");
-    scanf("%d", &choise);
-    if (choise == 1){
-        oneplayer();
-    }
-    else if (choise == 2){
-        twoplayer();
-    }
-
-
+    menu();
 }
