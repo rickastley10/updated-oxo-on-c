@@ -2,6 +2,15 @@
 #include <stdlib.h>
 #include <string.h>
 #include <time.h>
+int clearscreen(){
+
+    //replace cls with clear
+    system("cls");
+    //like this
+    //  ||
+    //  \/
+    //system("clear");
+}
 int twoplayer(){
 char a1[10] = "1", a2[10] = "2", a3[10] = "3", a4[10] = "4", a5[10] = "5", a6[10] = "6", a7[10] = "7", a8[10] = "8", a9[10] = "9";
     int turn = 1;
@@ -23,7 +32,7 @@ char a1[10] = "1", a2[10] = "2", a3[10] = "3", a4[10] = "4", a5[10] = "5", a6[10
         printf("\nwhere to place what?\n(from 1 to 9)\nq to quit\nr to restart\n> ");
         char num[10] = "";
         scanf("%9s", num);
-        system("cls");
+        clearscreen();
         if (strcmp(num, "1") == 0) {
             if (turn == 1){
                 strcpy(a1, "x");
@@ -128,7 +137,7 @@ char a1[10] = "1", a2[10] = "2", a3[10] = "3", a4[10] = "4", a5[10] = "5", a6[10
             turn = 0;
         }
 
-        system("cls");
+        clearscreen();
         
 
 
@@ -268,7 +277,7 @@ char a1[10] = "1", a2[10] = "2", a3[10] = "3", a4[10] = "4", a5[10] = "5", a6[10
         printf("\nwhere to place what?\n(from 1 to 9)\nq to quit\nr to restart\n> ");
         char num[10] = "";
         scanf("%9s", num);
-        system("cls");
+        clearscreen();
 
         turn = 1;
         if (strcmp(num, "1") == 0) {
@@ -438,7 +447,7 @@ char a1[10] = "1", a2[10] = "2", a3[10] = "3", a4[10] = "4", a5[10] = "5", a6[10
 
 
         }
-        system("cls");
+        clearscreen();
         
 
 
