@@ -733,8 +733,9 @@ int menu(){
     while (1)
     {
         
-        printf("Welcome to OXO");
+        
         clearscreen();
+        printf("Welcome to OXO \n");
         char choise[99] = "";
         printf("    1 - single player\n    2 - multiplayer\n    q - quit\n> ");
         scanf("%9s", &choise);
@@ -753,3 +754,4 @@ int menu(){
 int main(){
     menu();
 }
+
