@@ -306,7 +306,8 @@ char a1[10] = "1", a2[10] = "2", a3[10] = "3", a4[10] = "4", a5[10] = "5", a6[10
         clearscreen();
 
         turn = 1;
-        if (strcmp(num, "1") == 0) {
+        if (strcmp(num, "1") == 0 && strcmp(a1, "1")== 0) {
+            turn2 = turn2 + 1;
             turn = 1;
             if (turn == 1){
                 strcpy(a1, "x");
@@ -317,7 +318,8 @@ char a1[10] = "1", a2[10] = "2", a3[10] = "3", a4[10] = "4", a5[10] = "5", a6[10
             }
             
         }
-        else if (strcmp(num, "2") == 0) {
+        else if (strcmp(num, "2") == 0 && strcmp(a2, "2")== 0) {
+            turn2 = turn2 + 1;
             turn = 1;
             if (turn == 1){
                 strcpy(a2, "x");
@@ -327,7 +329,8 @@ char a1[10] = "1", a2[10] = "2", a3[10] = "3", a4[10] = "4", a5[10] = "5", a6[10
                 strcpy(a2, "o");
             }
         }
-        else if (strcmp(num, "3") == 0) {
+        else if (strcmp(num, "3") == 0 && strcmp(a3, "3")== 0) {
+            turn2 = turn2 + 1;
             turn = 1;
             if (turn == 1){
                 strcpy(a3, "x");
@@ -337,7 +340,8 @@ char a1[10] = "1", a2[10] = "2", a3[10] = "3", a4[10] = "4", a5[10] = "5", a6[10
                 strcpy(a3, "o");
             }
         }
-        else if (strcmp(num, "4") == 0) {
+        else if (strcmp(num, "4") == 0 && strcmp(a4, "4")== 0) {
+            turn2 = turn2 + 1;
             turn = 1;
             if (turn == 1){
                 strcpy(a4, "x");
@@ -347,7 +351,8 @@ char a1[10] = "1", a2[10] = "2", a3[10] = "3", a4[10] = "4", a5[10] = "5", a6[10
                 strcpy(a4, "o");
             }
         }
-        else if (strcmp(num, "5") == 0) {
+        else if (strcmp(num, "5") == 0 && strcmp(a5, "5")== 0) {
+            turn2 = turn2 + 1;
             turn = 1;
             if (turn == 1){
                 strcpy(a5, "x");
@@ -357,7 +362,8 @@ char a1[10] = "1", a2[10] = "2", a3[10] = "3", a4[10] = "4", a5[10] = "5", a6[10
                 strcpy(a5, "o");
             }
         }
-        else if (strcmp(num, "6") == 0) {
+        else if (strcmp(num, "6") == 0 && strcmp(a6, "6")== 0) {
+            turn2 = turn2 + 1;
             turn = 1;
             if (turn == 1){
                 strcpy(a6, "x");
@@ -367,7 +373,8 @@ char a1[10] = "1", a2[10] = "2", a3[10] = "3", a4[10] = "4", a5[10] = "5", a6[10
                 strcpy(a6, "o");
             }
         }
-        else if (strcmp(num, "7") == 0) {
+        else if (strcmp(num, "7") == 0 && strcmp(a7, "7")== 0) {
+            turn2 = turn2 + 1;
             turn = 1;
             if (turn == 1){
                 strcpy(a7, "x");
@@ -377,7 +384,8 @@ char a1[10] = "1", a2[10] = "2", a3[10] = "3", a4[10] = "4", a5[10] = "5", a6[10
                 strcpy(a7, "o");
             }
         }
-        else if (strcmp(num, "8") == 0) {
+        else if (strcmp(num, "8") == 0 && strcmp(a8, "8")== 0) {
+            turn2 = turn2 + 1;
             turn = 1;
             if (turn == 1){
                 strcpy(a8, "x");
@@ -387,7 +395,8 @@ char a1[10] = "1", a2[10] = "2", a3[10] = "3", a4[10] = "4", a5[10] = "5", a6[10
                 strcpy(a8, "o");
             }
         }
-        else if (strcmp(num, "9") == 0) {
+        else if (strcmp(num, "9") == 0 && strcmp(a9, "9")== 0) {
+            turn2 = turn2 + 1;
             turn = 1;
             if (turn == 1){
                 strcpy(a9, "x");
@@ -414,7 +423,7 @@ char a1[10] = "1", a2[10] = "2", a3[10] = "3", a4[10] = "4", a5[10] = "5", a6[10
             turn2 = 0;
         }
         
-        turn2 = turn2 + 1;
+        
         turn = turn + 1;
         
         if (turn == 2){
@@ -429,47 +438,149 @@ char a1[10] = "1", a2[10] = "2", a3[10] = "3", a4[10] = "4", a5[10] = "5", a6[10
                     if (turn2 == 9){break;}
                 
                 
-                    srand(time(NULL)); 
                     
-                    int randomNum = (rand() % 9) + 1;
-                    
-                    //sprintf(num, "%d", randomNum);
 
-                    if (randomNum == 1 && strcmp(a1, "1")==0 && strcmp(a1, "x")!=0 && strcmp(a1, "o")!=0){
-                        strcpy(a1, "o");
-                        valid = 1;
-                    }
-                    else if (randomNum == 2 && strcmp(a2, "2")==0 && strcmp(a2, "x")!=0 && strcmp(a2, "o")!=0){
-                        strcpy(a2, "o");
-                        valid = 1;
-                    }
-                    else if (randomNum == 3 && strcmp(a3, "3")==0 && strcmp(a3, "x")!=0 && strcmp(a3, "o")!=0){
+
+                    if (strcmp(a1, "x")==0 && strcmp(a2, "x")==0 && strcmp(a3, "3")==0 && valid != 1)
+                    {
                         strcpy(a3, "o");
-                        valid = 1;
+                        valid= 1;
                     }
-                    else if (randomNum == 4 && strcmp(a4, "4")==0 && strcmp(a4, "x")!=0 && strcmp(a4, "o")!=0){
-                        strcpy(a4, "o");
-                        valid = 1;
+                    if (strcmp(a2, "x")==0 && strcmp(a3, "x")==0 && strcmp(a1, "1")==0 && valid != 1)
+                    {
+                        strcpy(a1, "o");
+                        valid= 1;
                     }
-                    else if (randomNum == 5 && strcmp(a5, "5")==0 && strcmp(a5, "x")!=0 && strcmp(a5, "o")!=0){
-                        strcpy(a5, "o");
-                        valid = 1;
+                    if (strcmp(a1, "x")==0 && strcmp(a3, "x")==0 && strcmp(a2, "2")==0 && valid != 1)
+                    {
+                        strcpy(a2, "o");
+                        valid= 1;
                     }
-                    else if (randomNum == 6 && strcmp(a6, "6")==0 && strcmp(a6, "x")!=0 && strcmp(a6, "o")!=0){
-                        strcpy(a6, "o");
-                        valid = 1;
+                    
+
+
+                    if(strcmp(a4, "x")==0 && strcmp(a5, "x")==0 && strcmp(a6, "6")==0 && valid != 1) {
+                        strcpy(a6, "o"); valid=1;
                     }
-                    else if (randomNum == 7 && strcmp(a7, "7")==0 && strcmp(a7, "x")!=0 && strcmp(a7, "o")!=0){
-                        strcpy(a7, "o");
-                        valid = 1;
+                    if(strcmp(a4, "x")==0 && strcmp(a6, "x")==0 && strcmp(a5, "5")==0 && valid != 1) {
+                        strcpy(a5, "o"); valid=1;
                     }
-                    else if (randomNum == 8 && strcmp(a8, "8")==0 && strcmp(a8, "x")!=0 && strcmp(a8, "o")!=0){
-                        strcpy(a8, "o");
-                        valid = 1;
+                    if(strcmp(a5, "x")==0 && strcmp(a6, "x")==0 && strcmp(a4, "4")==0 && valid != 1) {
+                        strcpy(a4, "o"); valid=1;
                     }
-                    else if (randomNum == 9 && strcmp(a9, "9")==0 && strcmp(a9, "x")!=0 && strcmp(a9, "o")!=0){
-                        strcpy(a9, "o");
-                        valid = 1;
+
+
+                    if(strcmp(a7, "x")==0 && strcmp(a8, "x")==0 && strcmp(a9, "9")==0 && valid != 1) {
+                        strcpy(a9, "o"); valid=1;
+                    }
+                    if(strcmp(a7, "x")==0 && strcmp(a9, "x")==0 && strcmp(a8, "8")==0 && valid != 1) {
+                        strcpy(a8, "o"); valid=1;
+                    }
+                    if(strcmp(a8, "x")==0 && strcmp(a9, "x")==0 && strcmp(a7, "7")==0 && valid != 1) {
+                        strcpy(a7, "o"); valid=1;
+                    }
+
+
+                    if(strcmp(a1, "x")==0 && strcmp(a4, "x")==0 && strcmp(a7, "7")==0 && valid != 1) {
+                        strcpy(a7, "o"); valid=1;
+                    }
+                    if(strcmp(a4, "x")==0 && strcmp(a7, "x")==0 && strcmp(a1, "1")==0 && valid != 1) {
+                        strcpy(a1, "o"); valid=1;
+                    }
+                    if(strcmp(a1, "x")==0 && strcmp(a7, "x")==0 && strcmp(a4, "4")==0 && valid != 1) {
+                        strcpy(a4, "o"); valid=1;
+                    }
+
+                    
+                    if(strcmp(a2, "x")==0 && strcmp(a5, "x")==0 && strcmp(a8, "8")==0 && valid != 1) {
+                        strcpy(a8, "o"); valid=1;
+                    }
+                    if(strcmp(a2, "x")==0 && strcmp(a8, "x")==0 && strcmp(a5, "5")==0 && valid != 1) {
+                        strcpy(a5, "o"); valid=1;
+                    }
+                    if(strcmp(a5, "x")==0 && strcmp(a8, "x")==0 && strcmp(a2, "2")==0 && valid != 1) {
+                        strcpy(a2, "o"); valid=1;
+                    }
+
+
+
+                    if(strcmp(a3, "x")==0 && strcmp(a6, "x")==0 && strcmp(a9, "9")==0 && valid != 1) {
+                        strcpy(a9, "o"); valid=1;
+                    }
+                    if(strcmp(a3, "x")==0 && strcmp(a9, "x")==0 && strcmp(a6, "6")==0 && valid != 1) {
+                        strcpy(a6, "o"); valid=1;
+                    }
+                    if(strcmp(a6, "x")==0 && strcmp(a9, "x")==0 && strcmp(a3, "3")==0 && valid != 1) {
+                        strcpy(a3, "o"); valid=1;
+                    }
+
+
+
+                    if(strcmp(a1, "x")==0 && strcmp(a5, "x")==0 && strcmp(a9, "9")==0 && valid != 1) {
+                        strcpy(a9, "o"); valid=1;
+                    }
+                    if(strcmp(a5, "x")==0 && strcmp(a9, "x")==0 && strcmp(a1, "1")==0 && valid != 1) {
+                        strcpy(a1, "o"); valid=1;
+                    }
+                    if(strcmp(a1, "x")==0 && strcmp(a9, "x")==0 && strcmp(a5, "5")==0 && valid != 1) {
+                        strcpy(a5, "o"); valid=1;
+                    }
+
+
+
+                    if(strcmp(a3, "x")==0 && strcmp(a5, "x")==0 && strcmp(a7, "7")==0 && valid != 1) {
+                        strcpy(a7, "o"); valid=1;
+                    }
+                    if(strcmp(a5, "x")==0 && strcmp(a7, "x")==0 && strcmp(a3, "3")==0 && valid != 1) {
+                        strcpy(a3, "o"); valid=1;
+                    }
+                    if(strcmp(a3, "x")==0 && strcmp(a7, "x")==0 && strcmp(a5, "5")==0 && valid != 1) {
+                        strcpy(a5, "o"); valid=1;
+                    }
+
+                    else if (valid != 1){
+                        srand(time(NULL)); 
+                        
+                        int randomNum = (rand() % 9) + 1;
+                        
+                        //sprintf(num, "%d", randomNum);
+
+                        if (randomNum == 1 && strcmp(a1, "1")==0 && strcmp(a1, "x")!=0 && strcmp(a1, "o")!=0){
+                            strcpy(a1, "o");
+                            valid = 1;
+                        }
+                        else if (randomNum == 2 && strcmp(a2, "2")==0 && strcmp(a2, "x")!=0 && strcmp(a2, "o")!=0){
+                            strcpy(a2, "o");
+                            valid = 1;
+                        }
+                        else if (randomNum == 3 && strcmp(a3, "3")==0 && strcmp(a3, "x")!=0 && strcmp(a3, "o")!=0){
+                            strcpy(a3, "o");
+                            valid = 1;
+                        }
+                        else if (randomNum == 4 && strcmp(a4, "4")==0 && strcmp(a4, "x")!=0 && strcmp(a4, "o")!=0){
+                            strcpy(a4, "o");
+                            valid = 1;
+                        }
+                        else if (randomNum == 5 && strcmp(a5, "5")==0 && strcmp(a5, "x")!=0 && strcmp(a5, "o")!=0){
+                            strcpy(a5, "o");
+                            valid = 1;
+                        }
+                        else if (randomNum == 6 && strcmp(a6, "6")==0 && strcmp(a6, "x")!=0 && strcmp(a6, "o")!=0){
+                            strcpy(a6, "o");
+                            valid = 1;
+                        }
+                        else if (randomNum == 7 && strcmp(a7, "7")==0 && strcmp(a7, "x")!=0 && strcmp(a7, "o")!=0){
+                            strcpy(a7, "o");
+                            valid = 1;
+                        }
+                        else if (randomNum == 8 && strcmp(a8, "8")==0 && strcmp(a8, "x")!=0 && strcmp(a8, "o")!=0){
+                            strcpy(a8, "o");
+                            valid = 1;
+                        }
+                        else if (randomNum == 9 && strcmp(a9, "9")==0 && strcmp(a9, "x")!=0 && strcmp(a9, "o")!=0){
+                            strcpy(a9, "o");
+                            valid = 1;
+                        }
                     }
                 }
 
@@ -622,7 +733,7 @@ int menu(){
     while (1)
     {
         
-    
+        printf("Welcome to OXO");
         clearscreen();
         char choise[99] = "";
         printf("    1 - single player\n    2 - multiplayer\n    q - quit\n> ");
