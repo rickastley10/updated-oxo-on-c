@@ -10,14 +10,17 @@ int twoplayer(){
     char a1[10] = "1", a2[10] = "2", a3[10] = "3", a4[10] = "4", a5[10] = "5", a6[10] = "6", a7[10] = "7", a8[10] = "8", a9[10] = "9";
     int turn = 1;
     int turn2 = 0;
+    int scoreX = 0;
+    int scoreO = 0;
     clearscreen();
     while (1)
     {
         
     
     
-        printf("\noxo\n");
-        
+        printf("\n\noxo\n");
+        printf("o - %d   ", scoreO);
+        printf("x - %d\n", scoreX);
         
         printf("%s|%s|%s\n", a1, a2, a3);
         printf("-----\n");
@@ -272,6 +275,12 @@ int twoplayer(){
 
 
         if(strcmp(a1, a2) == 0 && strcmp(a2, a3) == 0) {
+            if (strcmp(a1, "x")==0){
+                scoreX = scoreX + 1;
+            }
+            else if (strcmp(a1, "o")==0){
+                scoreO = scoreO + 1;
+            }
             printf("%s won!", a1);
             strcpy(a1, "1");
             strcpy(a2, "2");
@@ -286,6 +295,12 @@ int twoplayer(){
             turn2 = 0;
         }
         if(strcmp(a4, a5) == 0 && strcmp(a5, a6) == 0) {
+            if (strcmp(a4, "x")==0){
+                scoreX = scoreX + 1;
+            }
+            else if (strcmp(a4, "o")==0){
+                scoreO = scoreO + 1;
+            }
             printf("%s won!", a4);
             strcpy(a1, "1");
             strcpy(a2, "2");
@@ -300,6 +315,12 @@ int twoplayer(){
             turn2 = 0;
         }
         if(strcmp(a7, a8) == 0 && strcmp(a8, a9) == 0) {
+            if (strcmp(a7, "x")==0){
+                scoreX = scoreX + 1;
+            }
+            else if (strcmp(a7, "o")==0){
+                scoreO = scoreO + 1;
+            }
             printf("%s won!", a7);
             strcpy(a1, "1");
             strcpy(a2, "2");
@@ -317,6 +338,14 @@ int twoplayer(){
 
 
         if(strcmp(a1, a4) == 0 && strcmp(a4, a7) == 0) {
+
+            if (strcmp(a1, "x")==0){
+                scoreX = scoreX + 1;
+            }
+            else if (strcmp(a1, "o")==0){
+                scoreO = scoreO + 1;
+            }
+
             printf("%s won!", a1);
             strcpy(a1, "1");
             strcpy(a2, "2");
@@ -331,6 +360,12 @@ int twoplayer(){
             turn2 = 0;
         }
         if(strcmp(a2, a5) == 0 && strcmp(a5, a8) == 0) {
+            if (strcmp(a2, "x")==0){
+                scoreX = scoreX + 1;
+            }
+            else if (strcmp(a2, "o")==0){
+                scoreO = scoreO + 1;
+            }
             printf("%s won!", a2);
             strcpy(a1, "1");
             strcpy(a2, "2");
@@ -345,6 +380,12 @@ int twoplayer(){
             turn2 = 0;
         }
         if(strcmp(a3, a6) == 0 && strcmp(a6, a9) == 0) {
+            if (strcmp(a3, "x")==0){
+                scoreX = scoreX + 1;
+            }
+            else if (strcmp(a3, "o")==0){
+                scoreO = scoreO + 1;
+            }
             printf("%s won!", a3);
             strcpy(a1, "1");
             strcpy(a2, "2");
@@ -362,6 +403,12 @@ int twoplayer(){
 
         
         if(strcmp(a1, a5) == 0 && strcmp(a5, a9) == 0) {
+            if (strcmp(a1, "x")==0){
+                scoreX = scoreX + 1;
+            }
+            else if (strcmp(a1, "o")==0){
+                scoreO = scoreO + 1;
+            }
             printf("%s won!", a1);
             strcpy(a1, "1");
             strcpy(a2, "2");
@@ -376,6 +423,12 @@ int twoplayer(){
             turn2 = 0;
         }
         if(strcmp(a3, a5) == 0 && strcmp(a5, a7) == 0) {
+            if (strcmp(a3, "x")==0){
+                scoreX = scoreX + 1;
+            }
+            else if (strcmp(a3, "o")==0){
+                scoreO = scoreO + 1;
+            }
             printf("%s won!", a3);
             strcpy(a1, "1");
             strcpy(a2, "2");
@@ -410,15 +463,18 @@ int oneplayer(){
 char a1[10] = "1", a2[10] = "2", a3[10] = "3", a4[10] = "4", a5[10] = "5", a6[10] = "6", a7[10] = "7", a8[10] = "8", a9[10] = "9";
     int turn = 1;
     int turn2 = 0;
+    int scoreX = 0;
+    int scoreO = 0;
     clearscreen();
     while (1)
     {
         
     
     
-        printf("\noxo\n");
+        printf("\n\noxo\n");
         
-        
+        printf("o - %d   ", scoreO);
+        printf("x - %d\n", scoreX);
         printf("%s|%s|%s\n", a1, a2, a3);
         printf("-----\n");
         printf("%s|%s|%s\n", a4, a5, a6);
@@ -981,6 +1037,7 @@ if (strcmp(a1, "x")==0 && strcmp(a2, "x")==0 && strcmp(a3, "3")==0 && valid != 1
         }
         clearscreen();
         if (turn2 < 9){turn2 = turn2 + 1;}
+        
         else if (turn2 ==9){
             strcpy(a1, "1");
             strcpy(a2, "2");
@@ -1000,6 +1057,13 @@ if (strcmp(a1, "x")==0 && strcmp(a2, "x")==0 && strcmp(a3, "3")==0 && valid != 1
 
 
         if(strcmp(a1, a2) == 0 && strcmp(a2, a3) == 0) {
+            if (strcmp(a1, "x")==0){
+                scoreX = scoreX + 1;
+            }
+            else if (strcmp(a1, "o")==0){
+                scoreO = scoreO + 1;
+            }
+
             printf("%s won!", a1);
             strcpy(a1, "1");
             strcpy(a2, "2");
@@ -1014,6 +1078,13 @@ if (strcmp(a1, "x")==0 && strcmp(a2, "x")==0 && strcmp(a3, "3")==0 && valid != 1
             turn2 = 0;
         }
         if(strcmp(a4, a5) == 0 && strcmp(a5, a6) == 0) {
+            if (strcmp(a4, "x")==0){
+                scoreX = scoreX + 1;
+            }
+            else if (strcmp(a4, "o")==0){
+                scoreO = scoreO + 1;
+            }
+
             printf("%s won!", a4);
             strcpy(a1, "1");
             strcpy(a2, "2");
@@ -1028,6 +1099,13 @@ if (strcmp(a1, "x")==0 && strcmp(a2, "x")==0 && strcmp(a3, "3")==0 && valid != 1
             turn2 = 0;
         }
         if(strcmp(a7, a8) == 0 && strcmp(a8, a9) == 0) {
+            if (strcmp(a7, "x")==0){
+                scoreX = scoreX + 1;
+            }
+            else if (strcmp(a7, "o")==0){
+                scoreO = scoreO + 1;
+            }
+
             printf("%s won!", a7);
             strcpy(a1, "1");
             strcpy(a2, "2");
@@ -1045,6 +1123,13 @@ if (strcmp(a1, "x")==0 && strcmp(a2, "x")==0 && strcmp(a3, "3")==0 && valid != 1
 
 
         if(strcmp(a1, a4) == 0 && strcmp(a4, a7) == 0) {
+            if (strcmp(a1, "x")==0){
+                scoreX = scoreX + 1;
+            }
+            else if (strcmp(a1, "o")==0){
+                scoreO = scoreO + 1;
+            }
+
             printf("%s won!", a1);
             strcpy(a1, "1");
             strcpy(a2, "2");
@@ -1059,6 +1144,13 @@ if (strcmp(a1, "x")==0 && strcmp(a2, "x")==0 && strcmp(a3, "3")==0 && valid != 1
             turn2 = 0;
         }
         if(strcmp(a2, a5) == 0 && strcmp(a5, a8) == 0) {
+            if (strcmp(a2, "x")==0){
+                scoreX = scoreX + 1;
+            }
+            else if (strcmp(a2, "o")==0){
+                scoreO = scoreO + 1;
+            }
+
             printf("%s won!", a2);
             strcpy(a1, "1");
             strcpy(a2, "2");
@@ -1073,6 +1165,13 @@ if (strcmp(a1, "x")==0 && strcmp(a2, "x")==0 && strcmp(a3, "3")==0 && valid != 1
             turn2 = 0;
         }
         if(strcmp(a3, a6) == 0 && strcmp(a6, a9) == 0) {
+            if (strcmp(a3, "x")==0){
+                scoreX = scoreX + 1;
+            }
+            else if (strcmp(a3, "o")==0){
+                scoreO = scoreO + 1;
+            }
+
             printf("%s won!", a3);
             strcpy(a1, "1");
             strcpy(a2, "2");
@@ -1090,6 +1189,13 @@ if (strcmp(a1, "x")==0 && strcmp(a2, "x")==0 && strcmp(a3, "3")==0 && valid != 1
 
         
         if(strcmp(a1, a5) == 0 && strcmp(a5, a9) == 0) {
+            if (strcmp(a1, "x")==0){
+                scoreX = scoreX + 1;
+            }
+            else if (strcmp(a1, "o")==0){
+                scoreO = scoreO + 1;
+            }
+
             printf("%s won!", a1);
             strcpy(a1, "1");
             strcpy(a2, "2");
@@ -1104,6 +1210,13 @@ if (strcmp(a1, "x")==0 && strcmp(a2, "x")==0 && strcmp(a3, "3")==0 && valid != 1
             turn2 = 0;
         }
         if(strcmp(a3, a5) == 0 && strcmp(a5, a7) == 0) {
+            if (strcmp(a3, "x")==0){
+                scoreX = scoreX + 1;
+            }
+            else if (strcmp(a3, "o")==0){
+                scoreO = scoreO + 1;
+            }
+
             printf("%s won!", a3);
             strcpy(a1, "1");
             strcpy(a2, "2");
@@ -1144,4 +1257,3 @@ int menu(){
 int main(){
     menu();
 }
-
