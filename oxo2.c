@@ -4,12 +4,7 @@
 #include <time.h>
 int clearscreen(){
     printf("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
-    //replace cls with clear
-    //system("cls");
-    //like this
-    //  ||
-    //  \/
-    //system("clear");
+
 }
 int twoplayer(){
     char a1[10] = "1", a2[10] = "2", a3[10] = "3", a4[10] = "4", a5[10] = "5", a6[10] = "6", a7[10] = "7", a8[10] = "8", a9[10] = "9";
@@ -1149,3 +1144,4 @@ int menu(){
 int main(){
     menu();
 }
+
