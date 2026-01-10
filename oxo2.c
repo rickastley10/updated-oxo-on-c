@@ -4,6 +4,7 @@
 #include <time.h>
 int clearscreen(){
     printf("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
+    return 0;
 
 }
 int twoplayer(){
@@ -138,6 +139,8 @@ int twoplayer(){
                                             printf("\noxo\n");
                                     
                                     
+printf("o - %d   ", scoreO);
+        printf("x - %d\n", scoreX);
                                     printf("%s|%s|%s\n", a1, a2, a3);
                                     printf("-----\n");
                                     printf("%s|%s|%s\n", a4, a5, a6);
@@ -611,7 +614,8 @@ char a1[10] = "1", a2[10] = "2", a3[10] = "3", a4[10] = "4", a5[10] = "5", a6[10
                         {                   
                             clearscreen();
                                             printf("\noxo\n");
-                                    
+                                    printf("o - %d   ", scoreO);
+        printf("x - %d\n", scoreX);
                                     
                                     printf("%s|%s|%s\n", a1, a2, a3);
                                     printf("-----\n");
@@ -875,7 +879,7 @@ char a1[10] = "1", a2[10] = "2", a3[10] = "3", a4[10] = "4", a5[10] = "5", a6[10
 
 
 
-                    else if (valid != 1)
+                    if (valid != 1)
                     {
                        
                     
@@ -984,12 +988,12 @@ if (strcmp(a1, "x")==0 && strcmp(a2, "x")==0 && strcmp(a3, "3")==0 && valid != 1
 
                                 
 
-                                else if (valid != 1){
-                                    srand(time(NULL)); 
+                                if (valid != 1){
+                                    
                                     
                                     int randomNum = (rand() % 9) + 1;
                                     
-                                    //sprintf(num, "%d", randomNum);
+                                    
 
                                     if (randomNum == 1 && strcmp(a1, "1")==0 && strcmp(a1, "x")!=0 && strcmp(a1, "o")!=0){
                                         strcpy(a1, "o");
@@ -1241,7 +1245,7 @@ int menu(){
         printf("Welcome to OXO\n");
         char choise[99] = "";
         printf("    1 - single player\n    2 - multiplayer\n    q - quit\n> ");
-        scanf("%9s", &choise);
+        scanf("%98s", choise);
         if (strcmp(choise, "1")==0){
             oneplayer();
         }
@@ -1249,11 +1253,12 @@ int menu(){
             twoplayer();
         }
         else if (strcmp(choise, "q")==0) {
-            break;
+            return 0;
         }
 
     }
 }
 int main(){
+    srand(time(NULL));
     menu();
 }
