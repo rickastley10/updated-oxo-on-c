@@ -1818,18 +1818,19 @@ char a1[10] = "1", a2[10] = "2", a3[10] = "3", a4[10] = "4", a5[10] = "5", a6[10
 
 
                             if(valid!=1){
-                                
-                                if(strcmp(a5, "x")==0 && (strcmp(a9, "9")==0) && turn2==1 || turn2==2 && valid != 1) {
+                                if(strcmp(a5, "5")==0 && (turn2==1 || turn2==2) && valid != 1) {
+                                    strcpy(a5, "o"); valid=1;
+                                }
+
+                                if(strcmp(a5, "x")==0 && (strcmp(a9, "9")==0) && (turn2==1 || turn2==2) && valid != 1) {
                                     strcpy(a9, "o"); valid=1;
                                     
                                 }
-                                if(strcmp(a5, "x")==0 && (strcmp(a1, "x")==0) && (strcmp(a7, "7")==0) && turn2==3 || turn2==4 && valid != 1) {
+                                if(strcmp(a5, "x")==0 && (strcmp(a1, "x")==0) && (strcmp(a7, "7")==0) && (turn2==3 || turn2==4) && valid != 1) {
                                     strcpy(a7, "o"); valid=1;
                                 }
 
-                                if(strcmp(a5, "5")==0 && turn2==1 || turn2==2 && valid != 1) {
-                                    strcpy(a5, "o"); valid=1;
-                                }
+                                
                                 printf("%d", turn2);
                                         if (valid != 1){
                                             
